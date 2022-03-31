@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="icon" href="../assets/DS.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <header>
+        <img src="../assets/DS.png" alt="Logo del equipo">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./info_evento.html">Info</a></li>
+                <li><a href="./ranking.html">Ranking</a></li>
+                <li><a href="./jugadores.html">Jugadores</a></li>
+                <li><a href="./perfil_jugador.html">Perfiles Jugadores</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Contacto:</h1>
+
+    <section class="contenido">
+        <form class = "contenido__formulario"  action="procesar.php">
+            <h2>Ponete en contacto con nuestro equipo</h2>
+            <div class="contenido__formulario__elemento">
+                <label for="nombre_y_apellido">Como te llamas?:</label>
+                <input class="texto--contacto" type="text" name="nombre_y_apellido" id="nombre_y_apellido" placeholder = "Ingresa tu nombre y tu apellido...">
+            </div>
+            <div class="contenido__formulario__elemento">
+                <label for="email_contacto">E-mail de contacto:</label>
+                <input class="texto--contacto" type="email" name="email_contacto" id="email_contacto" placeholder="Ingresá tu e-mail...">
+            </div>
+            <div class="contenido__formulario__elemento">
+                <label for="mensaje">Ingresá tu mensaje:</label>
+                <textarea class="texto--contacto" name="mensaje" cols="30" rows="10" placeholder = "Escribinos tu consulta..."></textarea>
+            </div>
+            <div class="contenido__formulario__elemento">
+                <input class = "boton" type ="submit" value = "Enviar" name="boton_enviar" id="boton_enviar">
+            </div>
+        </form>
+    </section>
+
+
+    <footer>
+        <div class="footer__texto">
+            <h3>Sobre nosotros</h3>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae recusandae ipsam eos, libero id ipsa dolor voluptatibus! Quibusdam eveniet nam iure dignissimos quis eligendi! Delectus, distinctio. Maxime itaque autem officia?</span>
+        </div>
+
+        <div class="footer__links">
+            <h3>Nuestras redes</h3>
+            <a href="https://www.instagram.com/" target="_blank"><img class="footer__links_img" src="../assets/footer/logo_instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img class="footer__links_img" src="../assets/footer/logo_facebook.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img class="footer__links_img" src="../assets/footer/logo_youtube.png" alt="Youtube"></a>
+            <a href="https://www.twitch.tv/" target="_blank"><img class="footer__links_img" src="../assets/footer/logo_twitch.png" alt="Twitch"></a>
+        </div>
+    </footer>
+    
+</body>
+</html>

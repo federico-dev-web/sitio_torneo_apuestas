@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Jugador</title>
+    <link rel="icon" href="../assets/DS.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <header>
+        <img src="../assets/DS.png" alt="Logo del equipo">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./info_evento.html">Info</a></li>
+                <li><a href="./ranking.html">Ranking</a></li>
+                <li><a href="./jugadores.html">Jugadores</a></li>
+                <li><a href="#">Perfiles Jugadores</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Jugador X: <form action="buscar.php">
+        <label for="busqueda">Busca los jugadores del torneo por nick:   </label>
+            <input class="texto" type="text"" name="busqueda" id="busqueda" placeholder = "Nick del jugador...">
+            <input class="boton" type ="submit" value = "Buscar" name="boton_busqueda" id="boton_busqueda">
+    </form></h1>
+    
+    <section class = "cuerpo">
+        <div class="cuerpo__jugador">
+            <div class="cuerpo__jugador__info">
+                <img class="cuerpo__jugador__info__img" src="../assets/jugadores/jugador_a_liga_a.jpg" alt="Jugador A Liga A" width="250" height="250">
+                <span class="cuerpo__jugador__info__txt" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quibusdam veritatis, quia repudiandae officiis voluptas libero et itaque vitae blanditiis cumque dolor ullam rem, obcaecati ducimus illum autem veniam reiciendis. lore</span>
+            </div>
+            <ul class="cuerpo__jugador__caracteristicas">
+                <li>Datos 1 - valores 1</li>
+                <li>Datos 2 - valores 2</li>
+                <li>Datos 3 - valores 3</li>
+                <li>Datos 4 - valores 4</li>
+                <li>Datos 5 - valores 5</li>
+                <li>Datos N - valores N</li>
+            </ul>
+        </div>
+
+
+        <aside class="cuerpo__aside">
+            <h2>Otros Jugadores de la misma liga:</h2>
+            <ul id = "lista_otros_jugadores">
+                <a href="#"><li>Jugador B</li></a>
+                <a href="#"><li>Jugador C</li></a>
+                <a href="#"><li>Jugador N</li></a>
+            </ul>
+        </aside>
+    </section>
+
+    <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore voluptatem temporibus velit dolor, dolores enim deserunt ipsam adipisci repudiandae et natus laborum rerum molestias placeat tenetur magni rem, corporis consequuntur! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi quisquam culpa non et ipsa repellendus minus adipisci, ipsam reiciendis ut soluta voluptatem quam atque veritatis eaque, beatae minima maxime numquam!</p>
+
+    <footer>
+        <div class="footer__texto">
+            <h3>Sobre nosotros</h3>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae recusandae ipsam eos, libero id ipsa dolor voluptatibus! Quibusdam eveniet nam iure dignissimos quis eligendi! Delectus, distinctio. Maxime itaque autem officia?</span>
+        </div>
+
+        <div class="footer__links">
+            <h3>Nuestras redes</h3>
+            <a href="https://www.instagram.com/" target="_blank"><img class="footer__links_img" src="../assets/footer/logo_instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img class="footer__links_img" src="../assets/footer/logo_facebook.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img class="footer__links_img" src="../assets/footer/logo_youtube.png" alt="Youtube"></a>
+            <a href="https://www.twitch.tv/" target="_blank"><img class="footer__links_img" src="../assets/footer/logo_twitch.png" alt="Twitch"></a>
+        </div>
+    </footer>
+    
+</body>
+</html>

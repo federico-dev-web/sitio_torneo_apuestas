@@ -1,0 +1,393 @@
+/*Fuentes*/
+@font-face {
+    font-family: 'starjedi';
+    src: url(../assets/fonts/star_jedi/starjedi/Starjedi.ttf);
+}
+
+@font-face {
+    font-family: 'starjedihol';
+    src: url(../assets/fonts/star_jedi/starjedi/Starjhol.ttf);
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url(../assets/fonts/Roboto/Roboto-Light.ttf);
+}
+
+/*Fondo para toda la pagina*/
+body {
+    background: #EEEEEE;
+}
+
+/*Formato Header*/
+
+header {
+    background: #e590b7;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+
+header img {
+    margin: 50px;
+    height: 100px;
+    width: 100px;
+}
+
+header nav {
+    display: inline-block;
+    margin: 50px;
+    font-family: starjedi;
+    text-decoration: none;
+}
+
+
+header nav ul li{
+    display: inline-block;
+    margin: 20px;
+    color
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #1A1A40;
+}
+
+header nav ul li:hover {
+    background-color: #b87594;
+}
+
+/*Elementos en general*/
+
+h1 {
+    
+    font-family: starjedihol;
+    color: gold;
+    background-color: rgb(0, 0,0,0.80);
+    padding: 30px;
+    font-size: 45px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+h1 form{
+
+    font-family: roboto;
+    font-size: 22px;
+    padding: 2%;
+    color: whitesmoke;
+    font-weight: 500;
+
+}
+
+p {
+    font-family: roboto;
+    font-size: 22px;
+    padding: 2%;
+    color: #1A1A40;
+    font-weight: 500;
+}
+
+/*Formato elemento "cuerpo" (index y ranking)*/
+
+.cuerpo {
+    background-image: url(../assets/background/darth_background4.jpg);
+    background-size: 25%;
+    background-position-x: center;
+    background-position-y: center;
+    font-family: roboto;
+    display: flex;
+    padding: 1%;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 22px;
+    color: #1A1A40;
+}
+
+.cuerpo__principal {
+    background-color: #EEEEEE;
+    display: block;
+    text-align: left;
+
+    border: 8px;
+    border-style: solid;
+    border-image: linear-gradient(45deg,#e590b7, #3F3351 ) 1;
+
+    padding: 3%;
+    margin: 5%
+}
+
+
+.cuerpo__partidos ol li{
+    font-weight: 500;
+}
+
+
+.cuerpo__aside {
+    background-color: #EEEEEE;
+    display: block;
+    text-align: left;
+
+    border: 8px;
+    border-style: solid;
+    border-image: linear-gradient(45deg,#e590b7, #3F3351 ) 1;
+
+    margin: 5%;
+    padding: 5%;
+}
+
+.cuerpo__aside h2 { 
+    font-size: 30px;
+
+}
+
+.cuerpo__partidos ol li{
+    font-weight: 500;
+}
+
+
+.cuerpo__jugador{
+    background-color: #EEEEEE;
+    display: block;
+
+    border: 8px;
+    border-style: solid;
+    border-image: linear-gradient(45deg,#e590b7, #3F3351 ) 1;
+
+    padding: 3%;
+    margin: 5%
+}
+
+.cuerpo__jugador__info{
+    background-color: #EEEEEE;
+    display: flex;
+    text-align: left;
+}
+.cuerpo__jugador__info__img {
+
+    margin: 5%
+}
+.cuerpo__jugador__info__txt {
+    margin: 5%
+}
+
+.cuerpo__jugador__caracteristicas{
+    background-color: #EEEEEE;
+    text-align: left;
+    margin: 5%
+}
+
+/*Formato elemento "jugadoresIndex" (index)*/
+
+.jugadoresIndex {
+    height: 300px;
+    background-color: #3F3351;
+    text-align: center;
+    justify-content:space-around;
+    display: flex;
+    margin-top: 100px;
+
+}
+
+.jugadoresIndex__fotoYNombre {
+    display: inline-block;
+    opacity:unset;
+}
+
+.jugadoresIndex__fotoYNombre__foto {
+    width: 200px;
+    height: 200px;
+    display: block;
+    padding: 20%  40px 5% 40px; 
+}
+
+.jugadoresIndex__fotoYNombre__descripcion {
+    font-family: roboto;
+    padding: 0px 50px 0px 50px;
+    display: inline;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+
+/*Formato elementeo "contenido" (info_evento, jugadores y contacto)*/
+
+.contenido {
+    background-image: url(../assets/background/darth_background4.jpg);
+    background-size: 25%;
+    background-position-x: center;
+    background-position-y: center;
+    font-family: roboto;
+    padding: 1%;
+    font-size: 22px;
+    color: #1A1A40;
+}
+.contenido__media {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 5%;
+
+}
+
+.contenido__media__img {
+    width: 30%;
+
+}
+
+.contenido__media__video {
+    width: 560px;
+    height: 315px; 
+    text-align: center;
+}
+
+
+.contenido__texto {
+    background-color: #EEEEEE;
+    display: block;
+    padding: 5%;
+    border: 8px;
+    border-width: 8px;
+    border-style: solid;
+    border-image: linear-gradient(45deg,#e590b7, #3F3351 ) 1;
+    margin: 5%
+}
+
+.contenido__imagenes {
+    background-color: #EEEEEE;
+    padding: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    border: 8px;
+    border-width: 8px;
+    border-style: solid;
+    border-image: linear-gradient(45deg,#e590b7, #3F3351 ) 1;
+}
+
+.contenido__imagenes__elemento {
+    display: block;
+    margin: 20px;
+    width:fit-content;
+    text-align: center;
+}
+
+
+.contenido__liga {
+    background-color: #EEEEEE;
+    display: flex;
+    margin: 20px;
+    width: 80%;
+    text-align: center;
+    justify-content: space-around;
+
+    
+    border: 8px;
+    border-width: 8px;
+    border-style: solid;
+    border-image: linear-gradient(45deg,#e590b7, #3F3351 ) 1;
+
+    padding: 5%;
+    margin: 5%
+}
+
+.contenido__formulario {
+    background-color: #EEEEEE;
+    display: block;
+    padding: 5%;
+    border: 8px;
+    border-width: 8px;
+    border-style: solid;
+    border-image: linear-gradient(45deg,#e590b7, #3F3351 ) 1;
+    margin: 5%
+}
+
+
+.contenido__formulario__elemento {
+    margin: 5%;
+    text-align: center;
+
+}
+
+
+
+/*Formato formularios y botones*/
+.boton { 
+    background-color: rgba(255, 255, 255, 0.699);
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "roboto";
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    width: 100px;
+}
+
+.texto {
+    background-color: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "roboto";
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    width: auto;
+}
+
+.texto--contacto {
+    background-color: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "roboto";
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    width: 500px;
+}
+
+
+/*Formato Footer*/
+
+footer {
+    color: whitesmoke;
+    background-color: rgb(0, 0,0,0.8);
+    display: flex;
+    font-family: roboto;
+    margin-top: 100px;
+    font-weight: 500;
+    align-content: center;
+}
+
+.footer__texto {
+    width: 500px;
+    padding: 30px;
+}
+
+.footer__links {
+    font-display: inline-block;
+    padding: 30px 50px 50px 350px;
+    
+}
+
+.footer__links_img {
+    padding: 30px;
+    height: 50px;
+    width: 50px;
+}
