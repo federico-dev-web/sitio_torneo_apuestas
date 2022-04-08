@@ -23,11 +23,10 @@ body {
 
 header {
     background: #e590b7;
-    display: grid;
+    height: 200px;
+    display: flex;
     align-content: center;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 200px;
-    align-items: center;
+    justify-content: space-around;
 }
 
 header img {
@@ -81,17 +80,20 @@ header nav ul{
 
 }
 
-
 header nav ul li{
     display: inline-block;
     justify-content: space-around;
-    margin: 20px;
 }
 
-header nav ul li a{
+.letra{
     text-decoration: none;
-    font-size: 25px;
-    color: #1A1A40;
+    font-size: 20px;
+    color: #1A1A40; !important
+
+}
+
+.barra_nav{
+    background: #e590b7; !important
 }
 
 header nav ul li:hover {
@@ -276,15 +278,15 @@ p {
 }
 
 .jugadoresIndex__fotoYNombre {
-    display: inline-block;
+    display: block;
     opacity:unset;
 }
 
 .jugadoresIndex__fotoYNombre__foto {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     display: block;
-    padding: 20%  40px 5% 40px; 
+    margin: auto;
 }
 
 .jugadoresIndex__fotoYNombre__descripcion {
@@ -293,6 +295,11 @@ p {
     display: inline;
     color: whitesmoke;
     font-weight: 500;
+}
+
+
+.slide {
+    height: 250px;
 }
 
 
@@ -460,20 +467,20 @@ footer {
 }
 
 .footer__texto {
-    width: 500px;
+    width: 50%;
     padding: 30px;
+    margin: auto;
 }
 
 .footer__links {
+    width: 50%;
     font-display: inline-block;
-    padding: 30px 50px 50px 350px;
-    
+    margin: auto;
 }
 
 .footer__links_img {
-    padding: 30px;
     height: 50px;
-    width: 50px;
+    margin: 10px;
 }
 
 
@@ -481,22 +488,19 @@ footer {
 
 @media screen and (max-width: 1557px){
 
-    header nav ul li a{
+    .letra{
         font-size: 20px;
     }
     
 }
 
 
-@media screen and (max-width: 1341px){
-
-    header nav ul {
-        display: none;
-    }
+@media screen and (max-width: 1240px){
+/*
     header i img{ 
         display:inline-block;
     }
-
+*/
     .contenido__imagenes {
         flex-wrap: wrap;
     }

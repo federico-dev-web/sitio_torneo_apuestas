@@ -10,20 +10,44 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+
     <header>
-        <img src="./assets/DS.png" alt="Logo del equipo">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="./pages/info_evento.html">Info</a></li>
-                <li><a href="./pages/ranking.html">Ranking</a></li>
-                <li><a href="./pages/jugadores.html">Jugadores</a></li>
-                <li><a href="./pages/perfil_jugador.html">Perfiles Jugadores</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-        <i class = "header__hamburguesa"><img class="header__hamburguesa_img" src="./assets/icons/hamburger.png" alt=""></i>
+    <div class="conteiner-fluid d-flex justify-content-end">
+        <nav class="navbar navbar-expand-lg navbar-light bg-none">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="./assets/DS.png" alt="Logo del equipo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 barra_nav">
+                    <li class="nav-item active">
+                        <a class="nav-link letra" href="#">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link letra" href="./pages/info_evento.html">Info</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link letra" href="./pages/ranking.html">Ranking</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link letra" href="./pages/jugadores.html">Jugadores</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link letra" href="./pages/perfil_jugador.html">Perfiles Jugadores</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link letra" href="./pages/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            </nav>
+        </div>
     </header>
+
     
     
     <h1>Elegí tus jugadores favoritos y hacé tus apuestas</h1>
@@ -59,32 +83,68 @@
     </aside>
 </section>
 
-<section class = "jugadoresIndex" id="fotos_jugadores">
-    <div class="jugadoresIndex__fotoYNombre">
-        <a href="./pages/perfil_jugador.html">
-            <img class="jugadoresIndex__fotoYNombre__foto" id="jugador_a_liga_a" src="./assets/jugadores/jugador_a_liga_a.jpg" alt="Jugador A Liga A">
-            <label class="jugadoresIndex__fotoYNombre__descripcion" for="jugador_a_liga_a">Jugador A Liga A</label>
-        </a>
+<div id="carouselExampleDark" class="carousel carousel-dark slide mt-3" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
     </div>
-    <div class="jugadoresIndex__fotoYNombre">
-        <a href="./pages/perfil_jugador.html">
-            <img class="jugadoresIndex__fotoYNombre__foto" src="./assets/jugadores/jugador_b_liga_a.jpg" alt="Jugador B Liga A">
-            <p class="jugadoresIndex__fotoYNombre__descripcion" for="jugador_b_liga_a">Jugador B Liga A</p>
-        </a>
-    </div>
-    <div class="jugadoresIndex__fotoYNombre">
-        <a href="./pages/perfil_jugador.html">
-            <img class="jugadoresIndex__fotoYNombre__foto" src="./assets/jugadores/jugador_c_liga_a.PNG" alt="Jugador C Liga A">
-            <p class="jugadoresIndex__fotoYNombre__descripcion" for="jugador_c_liga_a">Jugador C Liga A</p>
-        </a>
-    </div>
-    <div class="jugadoresIndex__fotoYNombre">
-        <a href="./pages/perfil_jugador.html">
-            <img class="jugadoresIndex__fotoYNombre__foto" src="./assets/jugadores/jugador_e_liga_b.png" alt="Jugador E Liga B">
-            <p class="jugadoresIndex__fotoYNombre__descripcion" for="jugador_e_liga_b">Jugador E Liga B</p>  
-        </a>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+        <img src="./assets/jugadores/slide.png" class="container-fluid w-100 slide" alt="slide">
+        <div class="carousel-caption d-block d-md-block">
+            <div >
+                <a href="./pages/perfil_jugador.html">
+                    <img class="jugadoresIndex__fotoYNombre__foto text-center" src="./assets/jugadores/jugador_a_liga_a.jpg" alt="Jugador B Liga A">
+                    <label class="jugadoresIndex__fotoYNombre__descripcion text-center" for="jugador_a_liga_a">Jugador A Liga A</label>
+                </a>
+            </div>
         </div>
-</section>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+        <img src="./assets/jugadores/slide.png" class="container-fluid w-100 slide" alt="slide" >
+        <div class="carousel-caption d-block d-md-block">
+            <div class="jugadoresIndex__fotoYNombre">
+                <a href="./pages/perfil_jugador.html">
+                    <img class="jugadoresIndex__fotoYNombre__foto text-center" src="./assets/jugadores/jugador_b_liga_a.jpg" alt="Jugador B Liga A">
+                    <p class="jugadoresIndex__fotoYNombre__descripcion text-center" for="jugador_b_liga_a">Jugador B Liga A</p>
+                </a>
+            </div>
+        </div>
+        </div>
+        <div class="carousel-item">
+        <img src="./assets/jugadores/slide.png" class="container-fluid w-100 slide" alt="slide">
+        <div class="carousel-caption d-block d-md-block">
+            <div class="jugadoresIndex__fotoYNombre">
+                <a href="./pages/perfil_jugador.html">
+                    <img class="jugadoresIndex__fotoYNombre__foto text-center" src="./assets/jugadores/jugador_c_liga_a.PNG" alt="Jugador C Liga A">
+                    <p class="jugadoresIndex__fotoYNombre__descripcion text-center" for="jugador_c_liga_a">Jugador C Liga A</p>
+                </a>
+            </div>
+        </div>
+        </div>
+        <div class="carousel-item">
+        <img src="./assets/jugadores/slide.png" class="container-fluid w-100 slide" alt="slide">
+        <div class="carousel-caption d-block d-md-block">
+            <div class="jugadoresIndex__fotoYNombre">
+                <a href="./pages/perfil_jugador.html">
+                    <img class="jugadoresIndex__fotoYNombre__foto float-center" src="./assets/jugadores/jugador_e_liga_b.png" alt="Jugador E Liga B">
+                    <p class="jugadoresIndex__fotoYNombre__descripcion text-center" for="jugador_e_liga_b">Jugador E Liga B</p>  
+                </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
 
 
     <footer>

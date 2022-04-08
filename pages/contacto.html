@@ -12,39 +12,61 @@
 <body>
     
     <header>
-        <img src="../assets/DS.png" alt="Logo del equipo">
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./info_evento.html">Info</a></li>
-                <li><a href="./ranking.html">Ranking</a></li>
-                <li><a href="./jugadores.html">Jugadores</a></li>
-                <li><a href="./perfil_jugador.html">Perfiles Jugadores</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-            <i class = "header__hamburguesa"><img class="header__hamburguesa_img" src="../assets/icons/hamburger.png" alt=""></i>
-        </nav>
-    </header>
+        <div class="conteiner-fluid d-flex justify-content-end">
+            <nav class="navbar navbar-expand-lg navbar-light bg-none">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../assets/DS.png" alt="Logo del equipo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 barra_nav">
+                        <li class="nav-item active">
+                            <a class="nav-link letra" href="../index.html   ">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link letra" href="../pages/info_evento.html">Info</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link letra" href="../pages/ranking.html">Ranking</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link letra" href="../pages/jugadores.html">Jugadores</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link letra" href="../pages/perfil_jugador.html">Perfiles Jugadores</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link letra" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </nav>
+            </div>
+        </header>
 
     <h1>Contacto:</h1>
 
-    <section class="contenido">
+    <section class="contenido mb-3">
         <form class = "contenido__formulario"  action="procesar.php">
             <h2>Ponete en contacto con nuestro equipo</h2>
-            <div class="contenido__formulario__elemento">
+            <div class="form-label">
                 <label for="nombre_y_apellido">Como te llamas?:</label>
-                <input class="texto--contacto" type="text" name="nombre_y_apellido" id="nombre_y_apellido" placeholder = "Ingresa tu nombre y tu apellido...">
+                <input class="form-control" type="text" name="nombre_y_apellido" id="nombre_y_apellido" placeholder = "Ingresa tu nombre y tu apellido...">
             </div>
-            <div class="contenido__formulario__elemento">
+            <div class="form-label">
                 <label for="email_contacto">E-mail de contacto:</label>
-                <input class="texto--contacto" type="email" name="email_contacto" id="email_contacto" placeholder="Ingresá tu e-mail...">
+                <input class="form-control" type="email" name="email_contacto" id="email_contacto" placeholder="Ingresá tu e-mail...">
             </div>
-            <div class="contenido__formulario__elemento">
+            <div class="form-label">
                 <label for="mensaje">Ingresá tu mensaje:</label>
-                <textarea class="texto--contacto" name="mensaje" cols="30" rows="10" placeholder = "Escribinos tu consulta..."></textarea>
+                <textarea class="form-control" name="mensaje" cols="30" rows="10" placeholder = "Escribinos tu consulta..."></textarea>
             </div>
             <div class="contenido__formulario__elemento">
-                <input class = "boton" type ="submit" value = "Enviar" name="boton_enviar" id="boton_enviar">
+                <input class = "btn btn-dark" type ="submit" value = "Enviar" name="boton_enviar" id="boton_enviar">
             </div>
         </form>
     </section>
