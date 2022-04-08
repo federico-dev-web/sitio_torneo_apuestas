@@ -34,7 +34,36 @@ header img {
     height: 150px;
     width: 150px;
     grid-column: 2/3;
+    animation-name: rotar_logo;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-delay: 1s;
 }
+
+@keyframes rotar_logo {
+    0%{
+        transform: rotateY(0deg);
+    }
+
+    20%{
+        transform: rotateY(90deg);
+    }
+
+    40%{
+        transform: rotateY(0deg);
+    }
+    60%{
+        transform: rotateY(90deg);
+    }
+    80%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: none;
+    }
+}
+
 
 header nav {
     grid-column: 3/12;
@@ -66,8 +95,27 @@ header nav ul li a{
 }
 
 header nav ul li:hover {
-    background-color: #b87594;
+	animation: text-pop-up-top;
+    animation-duration: 1s;
+    transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940) both;    
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
 }
+
+@keyframes text-pop-up-top {
+    0% {
+        transform: translateY(0);
+        transform-origin: 50% 50%;
+        text-shadow: none;
+        text-shadow: 0 1px 0 #b87594, 0 2px 0 #b87594, 0 3px 0 #b87594, 0 4px 0 #b87594, 0 5px 0 #b87594, 0 6px 0 #b87594, 0 7px 0 #b87594, 0 8px 0 #b87594, 0 9px 0 #b87594, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        transform: translateY(-20px);
+        transform-origin: 50% 50%;
+        text-shadow: 0 1px 0 #b87594, 0 2px 0 #b87594, 0 3px 0 #b87594, 0 4px 0 #b87594, 0 5px 0 #b87594, 0 6px 0 #b87594, 0 7px 0 #b87594, 0 8px 0 #b87594, 0 9px 0 #b87594, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
 
 header i { 
     grid-template-columns: 12;
@@ -80,6 +128,7 @@ header i img{
     width: 20px;
     height: 20px;
     display: none;
+    animation: none;
 }
 
 /*Elementos en general*/
