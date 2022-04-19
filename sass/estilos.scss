@@ -255,12 +255,15 @@ body {
         .contenido__texto {
             background-color: #EEEEEE;
             display: block;
-            padding: 5%;
             border: 8px;
             border-width: 8px;
             border-style: solid;
             border-image: linear-gradient(45deg,#e590b7, #3F3351 ) 1;
-            margin: 5%
+            margin: 5%;
+            p{
+                margin: auto;
+                padding: auto;
+            }
         }
         .contenido__imagenes {
             background-color: #EEEEEE;

@@ -260,12 +260,15 @@ body .contenido .contenido__media .contenido__media__video {
 body .contenido .contenido__texto {
   background-color: #EEEEEE;
   display: block;
-  padding: 5%;
   border: 8px;
   border-width: 8px;
   border-style: solid;
   border-image: linear-gradient(45deg, #e590b7, #3F3351) 1;
   margin: 5%;
+}
+body .contenido .contenido__texto p {
+  margin: auto;
+  padding: auto;
 }
 body .contenido .contenido__imagenes {
   background-color: #EEEEEE;
