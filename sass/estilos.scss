@@ -1,0 +1,450 @@
+//Modulos
+@import "colores";
+
+/*Fuentes*/
+@font-face {
+    font-family: 'starjedi';
+    src: url(../assets/fonts/star_jedi/starjedi/Starjedi.ttf);
+}
+
+@font-face {
+    font-family: 'starjedihol';
+    src: url(../assets/fonts/star_jedi/starjedi/Starjhol.ttf);
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url(../assets/fonts/Roboto/Roboto-Light.ttf);
+}
+
+/*Fondo para toda la pagina*/
+body {
+    background: $color-fondo;    
+    /*Formato Header*/
+    header {
+        background: $color-elementos-principal;
+        height: 200px;
+        display: flex;
+        align-content: center;
+        justify-content: space-around;
+        img {
+            height: 150px;
+            width: 150px;
+            grid-column: 2/3;
+            animation-name: rotar_logo;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-duration: 3s;
+            animation-delay: 1s;
+        }
+        i { 
+            grid-template-columns: 12;
+            align-self: center;
+            justify-content: center;
+            display: flex;
+            img{ 
+                width: 20px;
+                height: 20px;
+                display: none;
+                animation: none;
+                @media screen and (max-width: 1341px){
+                    display:inline-block;
+                }
+            }
+        }
+        nav {
+            grid-column: 3/12;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            font-family: starjedi;
+            text-decoration: none;
+            ul{
+                background: $color-elementos-principal;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                li{
+                    display: inline-block;
+                    justify-content: space-around;
+                    margin: 20px;
+                    &:hover {
+                        animation: text-pop-up-top;
+                        animation-duration: 1s;
+                        transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940) both;    
+                        animation-timing-function: linear;
+                        animation-iteration-count: 1;
+                    }
+                    a{
+                        text-decoration: none;
+                        font-size: 20px;
+                        color: $color-fuentes-elementos-2;
+                    }
+                }
+            }
+        }
+    } 
+    h1 {
+            font-family: starjedihol;
+        color: $color-fuentes-titulos;
+        background-color: rgb(0, 0,0,0.80);
+        padding: 30px;
+        font-size: 45px;
+        display: flex;
+        justify-content: space-around;
+        @media screen and (max-width: 1130px){
+            display: block;
+            text-align: center;
+        }
+        p {
+            font-family: starjedihol;
+            color: $color-fuentes-titulos;
+            font-size: 45px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-around;
+            padding: 0px;
+            margin: 0px;
+        }
+        form{
+            font-family: roboto;
+            font-size: 22px;
+            color: $color-fuentes-elementos-1;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+    }   
+    p {
+        font-family: roboto;
+        font-size: 22px;
+        padding: 2%;
+        color: $color-fuentes-elementos-2;
+        font-weight: 500;
+    }
+    /*Formato elemento "cuerpo" (index y ranking)*/
+    .cuerpo {
+        background-image: url(../assets/background/darth_background4.jpg);
+        background-size: 25%;
+        background-position-x: center;
+        background-position-y: center;
+        font-family: roboto;
+        display: flex;
+        padding: 1%;
+        text-align: center;
+        justify-content: space-around;
+        font-size: 22px;
+        color: $color-fuentes-elementos-2;
+        @media screen and (max-width: 1130px){
+            display: block;
+        }
+        .cuerpo__principal {
+            background-color: $color-fondo;
+            display: block;
+            text-align: left;
+            border: 8px;
+            border-style: solid;
+            border-image: linear-gradient(45deg,$color-elementos-principal, $color-elementos-secundario) 1;
+            padding: 3%;
+            margin: 5%
+        }
+        .cuerpo__partidos{
+            ol{
+                li{
+                    font-weight: 500;
+                }
+            }
+        }
+        .cuerpo__aside {
+            background-color: $color-fondo;
+            display: block;
+            text-align: left;
+            border: 8px;
+            border-style: solid;
+            border-image: linear-gradient(45deg,$color-elementos-principal, $color-elementos-secundario ) 1;
+            margin: 5%;
+            padding: 5%;
+            h2 { 
+                font-size: 30px;        
+            }
+            ol{
+                li{
+                    font-weight: 500;
+                }
+            }
+        }
+        .cuerpo__jugador{
+            background-color: $color-fondo;
+            display: block;
+            border: 8px;
+            border-style: solid;
+            border-image: linear-gradient(45deg,$color-elementos-principal, $color-elementos-secundario ) 1;
+            padding: 3%;
+            margin: 5%;
+            .cuerpo__jugador__info{
+                background-color: $color-fondo;
+                display: flex;
+                text-align: left;
+                @media screen and (max-width: 550px){
+                    flex-wrap: wrap;
+                }
+                .cuerpo__jugador__info__img {
+                    margin: 5%
+                }
+                .cuerpo__jugador__info__txt {
+                    margin: 5%
+                }
+            }
+            .cuerpo__jugador__caracteristicas{
+                background-color: $color-fondo;
+                text-align: left;
+                margin: 5%
+            }
+        }
+    }
+    /*Formato elemento "jugadoresIndex" (index)*/
+    .jugadoresIndex__fotoYNombre__foto {
+        width: 150px;
+        height: 150px;
+        display: block;
+        margin: auto;
+    }
+    .jugadoresIndex__fotoYNombre__descripcion {
+        font-family: roboto;
+        padding: 0px 50px 0px 50px;
+        display: inline;
+        color: $color-fuentes-elementos-1;
+        font-weight: 500;
+    }
+    .jugadoresIndex {
+        background-color: $color-elementos-secundario;
+        text-align: center;
+        justify-content:space-around;
+        display: flex;
+        margin-top: 100px;
+        @media screen and (max-width: 1130px){
+            flex-wrap: wrap;
+            margin-top: 100px;
+        }
+        .jugadoresIndex__fotoYNombre {
+            display: block;
+            opacity:unset;
+            .jugadoresIndex__fotoYNombre__foto {
+                width: 150px;
+                height: 150px;
+                display: block;
+                margin: auto;
+            }
+            .jugadoresIndex__fotoYNombre__descripcion {
+                font-family: roboto;
+                padding: 0px 50px 0px 50px;
+                display: inline;
+                color: $color-fuentes-elementos-1;
+                font-weight: 500;
+            }
+        }
+    }
+    /*Formato elementeo "contenido" (info_evento, jugadores y contacto)*/
+    .contenido {
+        background-image: url(../assets/background/darth_background4.jpg);
+        background-size: 25%;
+        background-position-x: center;
+        background-position-y: center;
+        font-family: roboto;
+        padding: 1%;
+        font-size: 22px;
+        color: $color-fuentes-elementos-2;
+        .contenido__media {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 5%;
+            .contenido__media__img {
+                width: 30%;
+            }
+            .contenido__media__video {
+                width: 560px;
+                height: 315px; 
+                text-align: center;
+            }
+        }
+        .contenido__texto {
+            background-color: $color-fondo;
+            display: flex;
+            border: 8px;
+            border-width: 8px;
+            border-style: solid;
+            border-image: linear-gradient(45deg,$color-elementos-principal, $color-elementos-secundario) 1;
+            margin: 5%;
+            p{
+                margin: auto;
+                padding: auto;
+            }
+        }
+        .contenido__imagenes {
+            background-color: $color-fondo;
+            padding: auto;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            border: 8px;
+            border-width: 8px;
+            border-style: solid;
+            border-image: linear-gradient(45deg,$color-elementos-principal, $color-elementos-secundario ) 1;
+            @media screen and (max-width: 1341px){
+                flex-wrap: wrap;
+            }
+            .contenido__imagenes__elemento {
+                display: block;
+                margin: 20px;
+                width:fit-content;
+                text-align: center;
+            }
+        }
+        .contenido__liga {
+            background-color: $color-fondo;
+            display: flex;
+            margin: 20px;
+            width: 80%;
+            text-align: center;
+            justify-content: space-around;
+            border: 8px;
+            border-width: 8px;
+            border-style: solid;
+            border-image: linear-gradient(45deg,$color-elementos-principal, $color-elementos-secundario ) 1;
+            padding: 5%;
+            margin: 5%;
+            @media screen and (max-width: 840px){
+                flex-wrap: wrap;
+            }
+        }
+        .contenido__formulario {
+            background-color: $color-fondo;
+            display: block;
+            padding: 5%;
+            border: 8px;
+            border-width: 8px;
+            border-style: solid;
+            border-image: linear-gradient(45deg,$color-elementos-principal, $color-elementos-secundario ) 1;
+            margin: 5%;
+            .contenido__formulario__elemento {
+                margin: 5%;
+                text-align: center;
+            }
+        }
+    }
+    /*Formato Footer*/
+    footer {
+        color: $color-fuentes-elementos-1;
+        background-color: rgb(0, 0,0,0.8);
+        display: flex;
+        font-family: roboto;
+        margin-top: 100px;
+        font-weight: 500;
+        align-content: center;
+        @media screen and (max-width: 1130px){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-content: center;
+        }
+        .footer__texto {
+            width: 50%;
+            padding: 30px;
+            @media screen and (max-width: 1130px){
+                width: auto;
+            }
+        }
+        .footer__links {
+            font-display: inline-block;
+            width: 50%;
+            margin: auto;
+            @media screen and (max-width: 1130px){
+                padding: 0px;
+                font-display: flex; 
+                flex-wrap: wrap;   
+                justify-content: space-around;
+                align-content: space-around;
+            }
+            .footer__links_img {
+                height: 50px;
+                margin: 10px;
+                @media screen and (max-width: 1130px){
+                    padding: 15px;
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+        }
+    }
+    
+    /*Formato formularios y botones*/
+    .boton { 
+        background-color: $color-fuentes-elementos-6;
+        border: 1px solid $color-fuentes-elementos-3;
+        border-radius: 8px;
+        box-shadow:$color-fuentes-elementos-7;
+        box-sizing: border-box;
+        color: $color-fuentes-elementos-3;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "roboto";
+        font-size: 13px;
+        line-height: 29px;
+        padding: 0 10px 0 11px;
+        width: 100px;
+    }
+    .texto {
+        background-color: $color-fuentes-elementos-5;
+        border: 1px solid $color-fuentes-elementos-3;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: $color-fuentes-elementos-3;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "roboto";
+        font-size: 13px;
+        line-height: 29px;
+        padding: 0 10px 0 11px;
+        width: auto;
+    }
+    .texto--contacto {
+        background-color: $color-fuentes-elementos-5;
+        border: 1px solid $color-fuentes-elementos-3;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: $color-fuentes-elementos-3;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "roboto";
+        font-size: 13px;
+        line-height: 29px;
+        padding: 0 10px 0 11px;
+        width: 500px;
+        @media screen and (max-width: 1130px){
+            width: auto;
+        }
+    }
+    @keyframes rotar_logo {
+        0%{
+            transform: rotateY(0deg);
+        }
+        20%{
+            transform: rotateY(90deg);
+        }
+        40%{
+            transform: rotateY(0deg);
+        }
+        60%{
+            transform: rotateY(90deg);
+        }
+        80%{
+            transform: rotateY(0deg);
+        }
+        100%{
+            transform: none;
+        }
+    }
+    .slide{
+        height: 250px;
+    }
+}
