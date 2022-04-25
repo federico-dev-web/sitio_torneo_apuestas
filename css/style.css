@@ -1,3 +1,71 @@
+/*Mediaqueries*/
+@media screen and (max-width: 1341px) {
+  .contenido__imagenes {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1130px) {
+  h1 {
+    display: block;
+    text-align: center;
+  }
+
+  .cuerpo {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .jugadoresIndex {
+    flex-wrap: wrap;
+    margin-top: 100px;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+  }
+
+  .footer__texto {
+    width: auto;
+  }
+
+  .footer__links {
+    padding: 0px;
+    font-display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+
+  .footer__links_img {
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .texto--contacto {
+    width: auto;
+  }
+}
+@media screen and (max-width: 840px) {
+  .contenido__liga {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 550px) {
+  .cuerpo__jugador__info {
+    flex-wrap: wrap;
+  }
+
+  .cuerpo__jugador__info__img {
+    margin: 5%;
+  }
+
+  .cuerpo__jugador__info__txt {
+    margin: 5%;
+  }
+}
 /*Fuentes*/
 @font-face {
   font-family: "starjedi";
@@ -11,24 +79,28 @@
   font-family: "roboto";
   src: url(../assets/fonts/Roboto/Roboto-Light.ttf);
 }
+/*Map para el valor de negrita/peso de fuente*/
+/*Mixin para bordes*/
+/*Extend para fuentes*/
+.fuente-base, .texto--contacto, .texto, .boton, footer, .contenido, .contenido__imagenes__elemento .jugadoresIndex__fotoYNombre .jugadoresIndex__fotoYNombre__descripcion, .jugadoresIndex__fotoYNombre__descripcion, .cuerpo__aside ol li, .cuerpo__partidos ol li, .cuerpo, p, h1 form {
+  font-family: roboto;
+  font-weight: 500;
+}
+
 /*Fondo para toda la pagina*/
 body {
   background: #EEEEEE;
-  /*Formato Header*/
-  /*Formato elemento "cuerpo" (index y ranking)*/
-  /*Formato elemento "jugadoresIndex" (index)*/
-  /*Formato elementeo "contenido" (info_evento, jugadores y contacto)*/
-  /*Formato Footer*/
-  /*Formato formularios y botones*/
 }
-body header {
+
+/*Formato Header*/
+header {
   background: #e590b7;
   height: 200px;
   display: flex;
   align-content: center;
   justify-content: space-around;
 }
-body header img {
+header img {
   height: 150px;
   width: 150px;
   grid-column: 2/3;
@@ -38,24 +110,24 @@ body header img {
   animation-duration: 3s;
   animation-delay: 1s;
 }
-body header i {
+header i {
   grid-template-columns: 12;
   align-self: center;
   justify-content: center;
   display: flex;
 }
-body header i img {
+header i img {
   width: 20px;
   height: 20px;
   display: none;
   animation: none;
 }
 @media screen and (max-width: 1341px) {
-  body header i img {
+  header i img {
     display: inline-block;
   }
 }
-body header nav {
+header nav {
   grid-column: 3/12;
   display: flex;
   flex-direction: row;
@@ -63,30 +135,31 @@ body header nav {
   font-family: starjedi;
   text-decoration: none;
 }
-body header nav ul {
+header nav ul {
   background: #e590b7;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-body header nav ul li {
+header nav ul li {
   display: inline-block;
   justify-content: space-around;
   margin: 20px;
 }
-body header nav ul li:hover {
+header nav ul li:hover {
   animation: text-pop-up-top;
   animation-duration: 1s;
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation-timing-function: linear;
   animation-iteration-count: 1;
 }
-body header nav ul li a {
+header nav ul li a {
   text-decoration: none;
   font-size: 20px;
   color: #1A1A40;
 }
-body h1 {
+
+h1 {
   font-family: starjedihol;
   color: gold;
   background-color: rgba(0, 0, 0, 0.8);
@@ -95,13 +168,7 @@ body h1 {
   display: flex;
   justify-content: space-around;
 }
-@media screen and (max-width: 1130px) {
-  body h1 {
-    display: block;
-    text-align: center;
-  }
-}
-body h1 p {
+h1 p {
   font-family: starjedihol;
   color: gold;
   font-size: 45px;
@@ -111,27 +178,25 @@ body h1 p {
   padding: 0px;
   margin: 0px;
 }
-body h1 form {
-  font-family: roboto;
+h1 form {
   font-size: 22px;
   color: whitesmoke;
-  font-weight: 500;
   display: flex;
   align-items: center;
 }
-body p {
-  font-family: roboto;
+
+p {
   font-size: 22px;
   padding: 2%;
   color: #1A1A40;
-  font-weight: 500;
 }
-body .cuerpo {
+
+/*Formato elemento "cuerpo" (index y ranking)*/
+.cuerpo {
   background-image: url(../assets/background/darth_background4.jpg);
   background-size: 25%;
   background-position-x: center;
   background-position-y: center;
-  font-family: roboto;
   display: flex;
   padding: 1%;
   text-align: center;
@@ -139,12 +204,8 @@ body .cuerpo {
   font-size: 22px;
   color: #1A1A40;
 }
-@media screen and (max-width: 1130px) {
-  body .cuerpo {
-    display: block;
-  }
-}
-body .cuerpo .cuerpo__principal {
+
+.cuerpo__principal {
   background-color: #EEEEEE;
   display: block;
   text-align: left;
@@ -154,10 +215,8 @@ body .cuerpo .cuerpo__principal {
   padding: 3%;
   margin: 5%;
 }
-body .cuerpo .cuerpo__partidos ol li {
-  font-weight: 500;
-}
-body .cuerpo .cuerpo__aside {
+
+.cuerpo__aside {
   background-color: #EEEEEE;
   display: block;
   text-align: left;
@@ -167,13 +226,10 @@ body .cuerpo .cuerpo__aside {
   margin: 5%;
   padding: 5%;
 }
-body .cuerpo .cuerpo__aside h2 {
+.cuerpo__aside h2 {
   font-size: 30px;
 }
-body .cuerpo .cuerpo__aside ol li {
-  font-weight: 500;
-}
-body .cuerpo .cuerpo__jugador {
+.cuerpo__jugador {
   background-color: #EEEEEE;
   display: block;
   border: 8px;
@@ -182,213 +238,166 @@ body .cuerpo .cuerpo__jugador {
   padding: 3%;
   margin: 5%;
 }
-body .cuerpo .cuerpo__jugador .cuerpo__jugador__info {
+.cuerpo__jugador .cuerpo__jugador__info {
   background-color: #EEEEEE;
   display: flex;
   text-align: left;
 }
-@media screen and (max-width: 550px) {
-  body .cuerpo .cuerpo__jugador .cuerpo__jugador__info {
-    flex-wrap: wrap;
-  }
-}
-body .cuerpo .cuerpo__jugador .cuerpo__jugador__info .cuerpo__jugador__info__img {
-  margin: 5%;
-}
-body .cuerpo .cuerpo__jugador .cuerpo__jugador__info .cuerpo__jugador__info__txt {
-  margin: 5%;
-}
-body .cuerpo .cuerpo__jugador .cuerpo__jugador__caracteristicas {
+.cuerpo__jugador .cuerpo__jugador__info .cuerpo__jugador__caracteristicas {
   background-color: #EEEEEE;
   text-align: left;
   margin: 5%;
 }
-body .jugadoresIndex__fotoYNombre__foto {
+
+/*Formato elemento "jugadoresIndex" (index)*/
+.jugadoresIndex__fotoYNombre__foto {
   width: 150px;
   height: 150px;
   display: block;
   margin: auto;
 }
-body .jugadoresIndex__fotoYNombre__descripcion {
-  font-family: roboto;
+
+.jugadoresIndex__fotoYNombre__descripcion {
   padding: 0px 50px 0px 50px;
   display: inline;
   color: whitesmoke;
-  font-weight: 500;
 }
-body .jugadoresIndex {
+
+.contenido__imagenes__elemento {
   background-color: #3F3351;
   text-align: center;
   justify-content: space-around;
   display: flex;
   margin-top: 100px;
 }
-@media screen and (max-width: 1130px) {
-  body .jugadoresIndex {
-    flex-wrap: wrap;
-    margin-top: 100px;
-  }
-}
-body .jugadoresIndex .jugadoresIndex__fotoYNombre {
+.contenido__imagenes__elemento .jugadoresIndex__fotoYNombre {
   display: block;
   opacity: unset;
 }
-body .jugadoresIndex .jugadoresIndex__fotoYNombre .jugadoresIndex__fotoYNombre__foto {
+.contenido__imagenes__elemento .jugadoresIndex__fotoYNombre .jugadoresIndex__fotoYNombre__foto {
   width: 150px;
   height: 150px;
   display: block;
   margin: auto;
 }
-body .jugadoresIndex .jugadoresIndex__fotoYNombre .jugadoresIndex__fotoYNombre__descripcion {
-  font-family: roboto;
+.contenido__imagenes__elemento .jugadoresIndex__fotoYNombre .jugadoresIndex__fotoYNombre__descripcion {
   padding: 0px 50px 0px 50px;
   display: inline;
   color: whitesmoke;
-  font-weight: 500;
 }
-body .contenido {
+
+/*Formato elementeo "contenido" (info_evento, jugadores y contacto)*/
+.contenido {
   background-image: url(../assets/background/darth_background4.jpg);
   background-size: 25%;
   background-position-x: center;
   background-position-y: center;
-  font-family: roboto;
   padding: 1%;
   font-size: 22px;
   color: #1A1A40;
+  margin: auto;
 }
-body .contenido .contenido__media {
+.contenido .contenido__media {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 5%;
 }
-body .contenido .contenido__media .contenido__media__img {
+.contenido .contenido__media .contenido__media__img {
   width: 30%;
 }
-body .contenido .contenido__media .contenido__media__video {
+.contenido .contenido__media .contenido__media__video {
   width: 560px;
   height: 315px;
   text-align: center;
 }
-body .contenido .contenido__texto {
+.contenido .contenido__texto {
   background-color: #EEEEEE;
   display: flex;
   border: 8px;
-  border-width: 8px;
+  border: 8px;
   border-style: solid;
   border-image: linear-gradient(45deg, #e590b7, #3F3351) 1;
   margin: 5%;
 }
-body .contenido .contenido__texto p {
+.contenido .contenido__texto p {
   margin: auto;
   padding: auto;
 }
-body .contenido .contenido__imagenes {
+.contenido .contenido__imagenes {
   background-color: #EEEEEE;
   padding: auto;
   margin: auto;
   display: flex;
   justify-content: space-around;
   border: 8px;
-  border-width: 8px;
+  border: 8px;
   border-style: solid;
   border-image: linear-gradient(45deg, #e590b7, #3F3351) 1;
 }
-@media screen and (max-width: 1341px) {
-  body .contenido .contenido__imagenes {
-    flex-wrap: wrap;
-  }
-}
-body .contenido .contenido__imagenes .contenido__imagenes__elemento {
+.contenido .contenido__imagenes .contenido__imagenes__elemento {
   display: block;
   margin: 20px;
   width: fit-content;
   text-align: center;
 }
-body .contenido .contenido__liga {
+.contenido .contenido__liga {
   background-color: #EEEEEE;
   display: flex;
-  margin: 20px;
+  margin: auto;
+  margin-top: 5%;
   width: 80%;
   text-align: center;
   justify-content: space-around;
-  border: 8px;
   border-width: 8px;
+  border: 8px;
   border-style: solid;
   border-image: linear-gradient(45deg, #e590b7, #3F3351) 1;
   padding: 5%;
-  margin: 5%;
 }
-@media screen and (max-width: 840px) {
-  body .contenido .contenido__liga {
-    flex-wrap: wrap;
-  }
-}
-body .contenido .contenido__formulario {
+.contenido .contenido__formulario {
   background-color: #EEEEEE;
   display: block;
   padding: 5%;
   border: 8px;
-  border-width: 8px;
+  border: 8px;
   border-style: solid;
   border-image: linear-gradient(45deg, #e590b7, #3F3351) 1;
   margin: 5%;
 }
-body .contenido .contenido__formulario .contenido__formulario__elemento {
+.contenido .contenido__formulario .contenido__formulario__elemento {
   margin: 5%;
   text-align: center;
 }
-body footer {
+
+/*Formato Footer*/
+footer {
   color: whitesmoke;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
-  font-family: roboto;
   margin-top: 100px;
-  font-weight: 500;
   align-content: center;
 }
-@media screen and (max-width: 1130px) {
-  body footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-content: center;
-  }
-}
-body footer .footer__texto {
+
+.footer__texto {
   width: 50%;
   padding: 30px;
 }
-@media screen and (max-width: 1130px) {
-  body footer .footer__texto {
-    width: auto;
-  }
-}
-body footer .footer__links {
+
+.footer__links {
   font-display: inline-block;
   width: 50%;
-  margin: auto;
+  padding: 30px;
+  text-align: right;
 }
-@media screen and (max-width: 1130px) {
-  body footer .footer__links {
-    padding: 0px;
-    font-display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-  }
-}
-body footer .footer__links .footer__links_img {
+
+.footer__links_img {
   height: 50px;
   margin: 10px;
 }
-@media screen and (max-width: 1130px) {
-  body footer .footer__links .footer__links_img {
-    padding: 15px;
-    height: 50px;
-    width: 50px;
-  }
-}
-body .boton {
+
+/*Formato formularios y botones*/
+.boton {
   background-color: rgba(255, 255, 255, 0.699);
   border: 1px solid #0f1111;
   border-radius: 8px;
@@ -397,13 +406,13 @@ body .boton {
   color: #0f1111;
   cursor: pointer;
   display: inline-block;
-  font-family: "roboto";
   font-size: 13px;
   line-height: 29px;
   padding: 0 10px 0 11px;
   width: 100px;
 }
-body .texto {
+
+.texto {
   background-color: #fff;
   border: 1px solid #0f1111;
   border-radius: 8px;
@@ -411,13 +420,13 @@ body .texto {
   color: #0f1111;
   cursor: pointer;
   display: inline-block;
-  font-family: "roboto";
   font-size: 13px;
   line-height: 29px;
   padding: 0 10px 0 11px;
   width: auto;
 }
-body .texto--contacto {
+
+.texto--contacto {
   background-color: #fff;
   border: 1px solid #0f1111;
   border-radius: 8px;
@@ -425,17 +434,12 @@ body .texto--contacto {
   color: #0f1111;
   cursor: pointer;
   display: inline-block;
-  font-family: "roboto";
   font-size: 13px;
   line-height: 29px;
   padding: 0 10px 0 11px;
   width: 500px;
 }
-@media screen and (max-width: 1130px) {
-  body .texto--contacto {
-    width: auto;
-  }
-}
+
 @keyframes rotar_logo {
   0% {
     transform: rotateY(0deg);
@@ -456,7 +460,7 @@ body .texto--contacto {
     transform: none;
   }
 }
-body .slide {
+.slide {
   height: 250px;
 }
 

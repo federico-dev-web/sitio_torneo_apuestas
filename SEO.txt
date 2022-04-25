@@ -1,0 +1,56 @@
+-Elementos en comun para todas las páginas:
+	Palabras clave:
+	incluí esta etiqueta en los head de todas las paginas:
+	<meta name="keywords" content="AGE OF EMPIRES, AGE OF EMPIRES 2, EQUIPO, TEAM, GAME, GAMMING, GAMER, STEAM, 
+	XBOX, MICROSOFT, STREAM, COMPETENCIA, TORNEO, TWITCH, YOUTUBE, APUESTAS, ESTRATEGIA, RTS">
+
+
+
+-INDEX:
+	Descripciónn:
+	<meta name="description" content="El Dark Side es un equipo de gamming competitivo de Age Of Empires 2 DE. 
+	En este sitio podes ver los próximos enfrentamientos de los torneos internos y apostar.">
+
+	Encabezado:
+	Incluí los siguientes términos en el h1:
+		-"TORNEO"
+		-"AGE OF EMPIRES 2"
+		-"APUESTAS"
+
+
+-INFO:
+	Descripciónn:
+	<meta name="description" content="El Dark Side es un equipo de gamming competitivo de Age Of Empires 2 DE. 
+	En este sitio podes ver la toda la información de los torneos internos.">
+	
+	Encabezado:
+	Incluí los siguientes términos en el h1:
+		-"TORNEO"
+
+-RANKING:
+	Descripciónn:
+	<meta name="description" content="El Dark Side es un equipo de gamming competitivo de Age Of Empires 2 DE. 
+	Revisa como vienen las apuestas en nuestros torneos internos.">
+
+
+-JUGADORES:
+	Descripciónn:
+	<meta name="description" content="El Dark Side es un equipo de gamming competitivo de Age Of Empires 2 DE. 
+	Conoce a los jugadores que actualmente estan compitiendo y las categorias.">
+	
+	Encabezado:
+	Incluí los siguientes términos en el h1:
+		-"GAMERS"
+		-"TORNEO"
+
+
+-PERFILES JUGADORES:
+	Descripciónn:
+	<meta name="description" content="El Dark Side es un equipo de gamming competitivo de Age Of Empires 2 DE. 
+	Conoce todo sobre los jugadores, estrategias, estilos y habilidades.">
+
+
+-CONTACTO:
+	<meta name="description" content="El Dark Side es un equipo de gamming competitivo de Age Of Empires 2 DE. 
+	Ponete en contacto con nosotros.">
+
